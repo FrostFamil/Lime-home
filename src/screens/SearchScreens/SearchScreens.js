@@ -4,7 +4,7 @@ import {View, Text} from 'react-native';
 const SearchScreens  = () => {
 
     return (
-        <View>
+        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
             <Text>Search</Text>
         </View>
     )
