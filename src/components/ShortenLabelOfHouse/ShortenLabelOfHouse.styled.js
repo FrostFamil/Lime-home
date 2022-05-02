@@ -1,15 +1,18 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
+const {width} = Dimensions.get('screen');
 
 const styles = () => {
   
     return StyleSheet.create({
-        mainView: { 
-            margin: 10, 
-            height: 120, 
-            backgroundColor: '#f7f1e9', 
+        mainView: {
+            height: 120,
+            width: width,
+            backgroundColor: '#f7f1e9',
             flexDirection: 'row',
-            borderWidth: 1
+            borderWidth: 1,
+            position: 'absolute',
+            bottom: 10,
         },
         imageView: {
             width: '35%', 
