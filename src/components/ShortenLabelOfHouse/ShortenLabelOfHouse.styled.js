@@ -11,8 +11,7 @@ const styles = () => {
             backgroundColor: '#f7f1e9',
             flexDirection: 'row',
             borderWidth: 1,
-            position: 'absolute',
-            bottom: 10,
+            marginBottom: 10
         },
         imageView: {
             width: '35%', 
