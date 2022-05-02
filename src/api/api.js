@@ -27,6 +27,20 @@ const getAllHouses = async () => {
   return {success, payload};
 };
 
+const getSpecificHouse = async({id}) => {
+    const url = `${API_BASE_URL}/public/properties/${id}`;
+    const {data} = await axios
+      .get(url)
+      .catch((err) => {
+        return err.response || genericError;
+      });
+
+    const {success, payload} = data;
+  
+    return {success, payload};
+}
+
 export default {
-  getAllHouses
+  getAllHouses,
+  getSpecificHouse
 };
