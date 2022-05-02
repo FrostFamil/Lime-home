@@ -1,12 +1,13 @@
 import React,{useEffect, useState} from 'react';
 import {View, Text, Image} from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import MapView, {Marker} from 'react-native-maps';
 import api from '../../api/api';
 import CustomMarker from '../../components/CustomMarker/CustomMarker';
 import ShortenLabelOfHouse from '../../components/ShortenLabelOfHouse/ShortenLabelOfHouse';
 import styles from './MapScreens.styles';
 
-const MapScreens  = () => {
+const MapScreens  = ({navigation}) => {
     const style = styles();
 
     const [allHouses, setAllHouses] = useState([]);
@@ -37,13 +38,15 @@ const MapScreens  = () => {
             </MapView>
             {
                 chosenHouse !== null && (
-                    <ShortenLabelOfHouse
-                        name={chosenHouse.name}
-                        distance={chosenHouse.distance}
-                        image={chosenHouse.images[0].url}
-                        price={chosenHouse.city_id}
-                        rating={'4.5'}
-                    />
+                    <TouchableOpacity onPress={() => navigation.navigate('DetailScreen', {id: chosenHouse.id})}>
+                        <ShortenLabelOfHouse
+                            name={chosenHouse.name}
+                            distance={chosenHouse.distance}
+                            image={chosenHouse.images[0].url}
+                            price={chosenHouse.city_id}
+                            rating={'4.5'}
+                        />
+                    </TouchableOpacity>
                 )
             }
         </View>
