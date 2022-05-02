@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Image, Text} from 'react-native';
 import styles from './ShortenLabelOfHouse.styled';
-import { Foundation, AntDesign } from '@expo/vector-icons'; 
+import { Feather, AntDesign } from '@expo/vector-icons'; 
 import Line from '../Line/Line';
 
 const ShortenLabelOfHouse = ({name, distance, price, image, rating}) => {
@@ -22,7 +22,7 @@ const ShortenLabelOfHouse = ({name, distance, price, image, rating}) => {
                     <Text style={style.nameText}>{name}</Text>
                 </View>
                 <View style={style.markerTextView}>
-                    <Foundation name="marker" size={24} color="#c1824d" />
+                    <Feather name="map-pin" size={20} color="#c1824d" />
                     <Text style={style.distanceText}>
                         {distance.toFixed(1)} km from city center
                     </Text>
