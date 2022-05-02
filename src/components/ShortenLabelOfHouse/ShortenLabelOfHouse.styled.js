@@ -47,6 +47,22 @@ const styles = () => {
         price: {
             color: '#c1824d', 
             fontWeight: 'bold'
+        },
+        ratingView: {
+            flexDirection: 'row', 
+            backgroundColor: '#f7f1e9', 
+            height: 23,
+            width: 40,
+            alignItems: 'center', 
+            position: 'absolute',
+            bottom: 90, 
+            zIndex: 1000, 
+            justifyContent: 'flex-end', 
+            left: 75, 
+            borderRadius: 5
+        },
+        ratingText: {
+            fontWeight: '500'
         }
     });
   };

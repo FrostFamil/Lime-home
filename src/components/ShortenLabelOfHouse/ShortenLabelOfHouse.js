@@ -1,15 +1,19 @@
 import React from 'react';
 import {View, Image, Text} from 'react-native';
 import styles from './ShortenLabelOfHouse.styled';
-import { Foundation } from '@expo/vector-icons'; 
+import { Foundation, AntDesign } from '@expo/vector-icons'; 
 import Line from '../Line/Line';
 
-const ShortenLabelOfHouse = ({name, distance, price, image}) => {
+const ShortenLabelOfHouse = ({name, distance, price, image, rating}) => {
 
     const style = styles();
 
     return (
         <View style={style.mainView}>
+                <View style={style.ratingView}>
+                    <Text style={style.ratingText}>{rating}</Text>
+                    <AntDesign name="star" size={17} color="#b26423" />
+                </View>
             <View style={style.imageView}>
                 <Image style={style.image} source={{uri: image}}/>
             </View>
