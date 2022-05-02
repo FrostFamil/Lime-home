@@ -13,19 +13,22 @@ const ShortenLabelOfHouse = ({name, distance, price, image}) => {
             <View style={style.imageView}>
                 <Image style={style.image} source={{uri: image}}/>
             </View>
-            <View style={{marginLeft: 5}}>
+            <View style={style.textsView}>
                 <View>
-                    <Text style={{fontSize: 25}}>{name}</Text>
+                    <Text style={style.nameText}>{name}</Text>
                 </View>
-                <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                <View style={style.markerTextView}>
                     <Foundation name="marker" size={24} color="#c1824d" />
-                    <Text style={{fontSize: 15, marginLeft: 5}}>{distance.toFixed(1)} km from city center</Text>
+                    <Text style={style.distanceText}>
+                        {distance.toFixed(1)} km from city center
+                    </Text>
                 </View>
-                <View style={{margin: 5}}>
+                <View style={style.lineView}>
                     <Line/>
                 </View>
-                <View>
-                    <Text>From {price}.00$/Night</Text>
+                <View style={style.priceView}>
+                    <Text style={style.fromText}>From</Text>
+                    <Text style={style.price}> {price}.00$/Night</Text>
                 </View>
             </View>
         </View>
