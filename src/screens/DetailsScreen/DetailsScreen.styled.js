@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 
 const styles = () => {
@@ -10,16 +11,17 @@ const styles = () => {
             justifyContent: 'space-around'
         },
         carouselView: {
-            flex: 1
+            flex: 1,
+            flexDirection: 'column-reverse',
         },
         image: {
             width: '100%', 
-            height: '100%'
+            height: '100%',
         },
         paginationView: {
-            position: 'absolute', 
-            top: 240, 
-            marginHorizontal: 30
+            justifyContent: 'flex-end',
+            position: 'absolute',
+            height: '25%'
         },
         dotStyle: {
             width: 10,
